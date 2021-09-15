@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  margin: 0 6rem;
+}
+
+.profileContainer {
+  flex: 0 0 30%;
+}
+
+.repoLookUpContainer {
+  flex: 0 0 70%;
+}

@@ -6,6 +6,8 @@ This project is to create a github profile page clone to display the repositorie
 
 > Used CSS Modules, which makes easy to call css classes and ids without any clash of its names across project.
 
+### Using custom react hooks (usehttp) for API Calls
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

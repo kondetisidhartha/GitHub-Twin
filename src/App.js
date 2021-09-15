@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import StickyHeader from "./components/StickyHeader/StickyHeader";
+import ProfileAndRepoLookUp from "./components/ProfileAndRepoLookUp/ProfileAndRepoLookUp";
 
 function App() {
   return (
@@ -11,9 +12,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <StickyHeader />
-        <Switch>
-          <Route></Route>
-        </Switch>
+        <ProfileAndRepoLookUp />
         <Footer />
       </BrowserRouter>
     </>
