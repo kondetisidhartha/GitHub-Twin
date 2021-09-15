@@ -6,6 +6,8 @@ import { headerItems } from "./HeaderItems";
 import Button from "../../UI/button/Button";
 import { BiChevronDown } from "react-icons/bi";
 
+// Simple header component
+
 function Header() {
   return (
     <>

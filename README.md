@@ -2,7 +2,9 @@
 
 This project is to create a github profile page clone to display the repositories and allow the user to filter through the repositories by name using a search bar.
 
-Followed MVC Structure through full project.
+> Followed MVC Structure through full project.
+
+> Used CSS Modules, which makes easy to call css classes and ids without any clash of its names across project.
 
 ## Getting Started with Create React App
 
