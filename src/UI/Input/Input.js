@@ -9,7 +9,7 @@ const Input = (props) => {
         className={classes["search-input"]}
         type={props.type}
         id={props.id}
-        onInput={props.onChangeHandler}
+        onChange={props.onChangeHandler}
         value={props.value}
         placeholder={props.placeholder}
       />

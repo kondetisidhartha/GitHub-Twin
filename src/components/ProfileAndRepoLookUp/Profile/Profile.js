@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ProfileCard from "../../../UI/ProfileCard/ProfileCard";
 import useHttp from "../../hooks/use-http";
 
 function Profile(props) {
@@ -7,13 +8,13 @@ function Profile(props) {
 
   const transformProfile = (setFunction, responseData) => {
     const loadedProfile = [];
-    console.log(responseData);
 
-    console.log("Inside");
     loadedProfile.push({
       id: responseData.id,
       avatar: responseData.avatar_url,
       username: responseData.name,
+      email: responseData.email,
+      company: responseData.company,
       name: responseData.login,
       bio: responseData.bio,
       followers: responseData.followers,
@@ -28,7 +29,7 @@ function Profile(props) {
   useEffect(() => {
     profileRequest(
       {
-        url: `https://api.github.com/users/kondetisidhartha`,
+        url: `https://api.github.com/users/afc163`,
       },
       transformProfile.bind(null, setProfile)
     );
@@ -37,13 +38,7 @@ function Profile(props) {
   return (
     <>
       {profile.map((profile) => {
-        return (
-          <>
-            <img src={profile.avatar} alt={"Profile"}></img>
-            <p>{profile.username}</p>
-            <p>{profile.name}</p>
-          </>
-        );
+        return <ProfileCard key={profile.id} options={profile} />;
       })}
     </>
   );

@@ -1,19 +1,37 @@
 import React from "react";
-import classes from "./css/RepoCard.module.css";
+import "./css/RepoCard.css";
+import languageColor from "../github-lang-colors.json";
 
 function RepoCard(props) {
+  // Retireving color from saved json file
+  let langColor = "";
+  if (languageColor.hasOwnProperty(props.options.language)) {
+    langColor = languageColor[props.options.language];
+  }
   return (
-    <div className={classes.container}>
-      <div className={classes.name}>
-        {props.options.name}
-        <span className={classes.visibility}>
+    <div className="repo-card">
+      <div className="repo-details">
+        <a href="./">{props.options.name}</a>
+
+        <span className="repo-category">
           {props.options.private ? "Private" : "Public"}
         </span>
+        <p>{props.options.description}</p>
+        <div className="repo-bottom-details">
+          <div className="repo-meta">
+            <small>
+              <span className="color" style={{ background: `${langColor}` }}>
+                &nbsp;
+              </span>
+              ˚{props.options.language}
+            </small>
+            {console.log(props.options.repoLicense)}
+            {/* <small>{props.options.repoLicense}</small> */}
+            <small>{props.options.fork_count}</small>
+            <small>{props.options.updated_at}</small>
+          </div>
+        </div>
       </div>
-      <div className={classes.description}>{props.options.description}</div>
-      <div className={classes.language}>{props.options.language}</div>
-      <div className={classes.fork_count}>{props.options.fork_count}</div>
-      <div className={classes.updated_at}>{props.options.updated_at}</div>
     </div>
   );
 }

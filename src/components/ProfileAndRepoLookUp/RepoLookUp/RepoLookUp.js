@@ -14,6 +14,7 @@ function RepoLookUp() {
           type="text"
           value=""
           placeholder="Find a repository..."
+          onChangeHandler={() => console.log("Change")}
         />
         <ButtonGray>Type</ButtonGray>
         <ButtonGray>Language</ButtonGray>

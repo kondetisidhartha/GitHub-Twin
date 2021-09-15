@@ -2,9 +2,10 @@
   height: 4rem;
   background-color: #fff;
   border-bottom: 1px solid rgb(216, 222, 228);
-  z-index: 3;
   margin: 0 6rem;
   display: flex;
+  position: sticky;
+  top: 0;
 }
 
 .profileColumn {

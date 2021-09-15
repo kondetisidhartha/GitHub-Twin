@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RepoCard from "../../UI/RepoCard/RepoCard";
 import useHttp from "../hooks/use-http";
+import classes from "./css/RepoResults.module.css";
 
 function RepoResults() {
   const [repositories, setRepositories] = useState([]);
@@ -19,6 +20,7 @@ function RepoResults() {
         description: responseData[id].description,
         updated_at: responseData[id].updated_at,
         private: responseData[id].private,
+        repoLicense: responseData[id].license,
       });
     }
     setFunction(loadedRepos);
@@ -27,14 +29,14 @@ function RepoResults() {
   useEffect(() => {
     repoRequest(
       {
-        url: `https://api.github.com/users/kondetisidhartha/repos`,
+        url: `https://api.github.com/users/Vanguard90/repos`,
       },
       transformRepos.bind(null, setRepositories)
     );
   }, [repoRequest]);
 
   return (
-    <div>
+    <div className={classes.container}>
       {repositories.map((repo) => {
         return <RepoCard key={repo.id} options={repo} />;
       })}
