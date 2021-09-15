@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./css/RepoLookUp.module.css";
 import Input from "../../../UI/Input/Input";
 import ButtonGray from "../../../UI/ButtonGray/ButtonGray";
-import RepoResults from "../../RepoResults/RepoResult";
+import RepoResults from "../../RepoResults/RepoResults";
 
 function RepoLookUp() {
   return (
