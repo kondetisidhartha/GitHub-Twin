@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import classes from "./css/Header.module.css";
 import { AiOutlineGithub } from "react-icons/ai";
 import { headerItems } from "./HeaderItems";
-import Button from "../../UI/button/Button";
+import Button from "../../UI/Button/Button";
 import { BiChevronDown } from "react-icons/bi";
 
 // Simple header component
