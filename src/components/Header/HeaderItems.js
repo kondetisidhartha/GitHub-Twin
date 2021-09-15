@@ -8,41 +8,28 @@ export const headerItems = [
   {
     id: 2,
     title: "Team",
-    path: "https://github.com/team",
+    path: "./",
   },
   {
     id: 3,
     title: "Enterprise",
-    path: "https://github.com/enterprise",
+    path: "./",
   },
   {
     id: 4,
     title: "Explore",
+    dropdown: true,
     path: "./",
   },
   {
     id: 5,
     title: "Marketplace",
-    path: "https://github.com/marketplace",
+    path: "./",
   },
   {
     id: 6,
     title: "Pricing",
+    dropdown: true,
     path: "./",
-  },
-];
-
-export const whyGitHubDropDown = [
-  {
-    id: 1,
-    title: "Dropdown 1",
-    path: "./",
-    cName: "dropDownItem",
-  },
-  {
-    id: 2,
-    title: "Dropdown 2",
-    path: "./",
-    cName: "dropDownItem",
   },
 ];

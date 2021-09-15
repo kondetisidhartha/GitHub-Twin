@@ -27,7 +27,10 @@ function Header() {
             );
           })}
         </ul>
-        <Button />
+        <div className={classes.item}>
+          <Link to="./">Sign in</Link>
+        </div>
+        <Button>Sign up</Button>
       </nav>
     </>
   );

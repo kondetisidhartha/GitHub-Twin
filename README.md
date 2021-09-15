@@ -1,7 +1,8 @@
-
 ## About this project
 
-This project is to create a github profile page clone to display the repositories and allow the user to filter through the repositories by name using a search bar. 
+This project is to create a github profile page clone to display the repositories and allow the user to filter through the repositories by name using a search bar.
+
+Followed MVC Structure through full project.
 
 ## Getting Started with Create React App
 
@@ -28,8 +29,6 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-
 ## Future improvements
-
 
 ## Feedback about exercise
