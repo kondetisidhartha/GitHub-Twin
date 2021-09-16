@@ -20,7 +20,6 @@ function RepoLookUp() {
         <ButtonGray>Language</ButtonGray>
         <ButtonGray>Sort</ButtonGray>
       </form>
-      <hr className={classes.separator} />
       <RepoResults />
     </>
   );

@@ -2,8 +2,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.separator {
-  border: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }

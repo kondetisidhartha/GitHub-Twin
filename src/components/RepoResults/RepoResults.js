@@ -36,11 +36,11 @@ function RepoResults() {
   }, [repoRequest]);
 
   return (
-    <div className={classes.container}>
+    <>
       {repositories.map((repo) => {
         return <RepoCard key={repo.id} options={repo} />;
       })}
-    </div>
+    </>
   );
 }
 

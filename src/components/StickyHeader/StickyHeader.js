@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./css/StickyHeader.module.css";
 import { BiBookOpen, BiBookBookmark, BiPackage } from "react-icons/bi";
 import { AiOutlineProject } from "react-icons/ai";
@@ -9,21 +9,21 @@ function StickyHeader() {
     <div className={classes.container}>
       <div className={classes.profileColumn}></div>
       <div className={classes.repoColumn}>
-        <Link to="./">
+        <NavLink to="./" activeStyle={{ color: "red" }}>
           <BiBookOpen /> Overview
-        </Link>
-        <Link to="./">
+        </NavLink>
+        <NavLink to="./" activeStyle={{ color: "red" }}>
           <BiBookBookmark />
           Repositories
-        </Link>
-        <Link to="./">
+        </NavLink>
+        <NavLink to="./" activeStyle={{ color: "red" }}>
           <AiOutlineProject />
           Projects
-        </Link>
-        <Link to="./">
+        </NavLink>
+        <NavLink to="./" activeStyle={{ color: "red" }}>
           <BiPackage />
           Packages
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
