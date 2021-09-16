@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/RepoCard.css";
+import classes from "./css/RepoCard.module.css";
 import languageColor from "../github-lang-colors.json";
 import { FaBalanceScale } from "react-icons/fa";
 import { BiGitRepoForked } from "react-icons/bi";
@@ -17,12 +17,11 @@ function RepoCard(props) {
     const licenseInfo = props.options.repoLicense["name"];
     license = (
       <>
-        <span className="icon">{<FaBalanceScale />}</span>
+        <span className={classes.icon}>{<FaBalanceScale />}</span>
         <small>{licenseInfo}</small>
       </>
     );
   }
-  console.log(license);
 
   // Date formatter
   function get_time_diff(datetime) {
@@ -37,21 +36,23 @@ function RepoCard(props) {
   let formattedDate = get_time_diff(props.options.updated_at);
 
   return (
-    <div className="repo-card">
-      <div className="repo-details">
-        <a href="./">{props.options.name}</a>
-        {console.log(props.options)}
-        <span className="repo-category">
+    <div className={classes["repo-card"]}>
+      <div className={classes["repo-details"]}>
+        <a href={props.options.url}>{props.options.name}</a>
+        <span className={classes["repo-category"]}>
           {props.options.private ? "Private" : "Public"}
         </span>
         {/* Description */}
         <p>{props.options.description}</p>
         {/* Color and language */}
-        <div className="repo-bottom-details">
-          <div className="repo-meta">
+        <div className={classes["repo-bottom-details"]}>
+          <div className={classes["repo-meta"]}>
             {props.options.language ? (
               <>
-                <span className="color" style={{ background: `${langColor}` }}>
+                <span
+                  className={classes["color"]}
+                  style={{ background: `${langColor}` }}
+                >
                   &nbsp;
                 </span>
                 <small>{props.options.language}</small>
@@ -62,10 +63,10 @@ function RepoCard(props) {
             {/* License information */}
             {license}
             {/* Fork information */}
-            <span className="icon">{<BiGitRepoForked />}</span>
+            <span className={classes.icon}>{<BiGitRepoForked />}</span>
             <small>{props.options.forks_count}</small>
             {/* Updated on */}
-            <span className="icon">{<MdUpdate />}</span>
+            <span className={classes.icon}>{<MdUpdate />}</span>
             <small>{formattedDate}</small>
           </div>
         </div>

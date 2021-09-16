@@ -8,7 +8,6 @@ function RepoResults() {
 
   const transformRepos = (setFunction, responseData) => {
     const loadedRepos = [];
-    console.log(responseData);
 
     for (const id in responseData) {
       loadedRepos.push({
@@ -20,6 +19,7 @@ function RepoResults() {
         updated_at: responseData[id].updated_at,
         private: responseData[id].private,
         repoLicense: responseData[id].license,
+        url: responseData[id].svn_url,
       });
     }
     setFunction(loadedRepos);

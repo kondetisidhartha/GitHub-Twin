@@ -14,7 +14,7 @@ function StickyHeader() {
         </NavLink>
         <NavLink to="/" activeClassName={classes.activeTab} exact={true}>
           <BiBookBookmark />
-          Repositories
+          Repositories <span className={classes["repo-count"]}>10</span>
         </NavLink>
         <NavLink to="./projects" activeClassName={classes.activeTab}>
           <AiOutlineProject />

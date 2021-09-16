@@ -9,7 +9,7 @@ import ProfileAndRepoLookUp from "./components/ProfileAndRepoLookUp/ProfileAndRe
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter forceRefresh>
         <Header />
         <StickyHeader />
         <ProfileAndRepoLookUp />

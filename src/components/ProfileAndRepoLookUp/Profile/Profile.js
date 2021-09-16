@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProfileCard from "../../../UI/ProfileCard/ProfileCard";
 import useHttp from "../../hooks/use-http";
+import classes from "./css/Profile.module.css";
 
 function Profile(props) {
   const [profile, setProfile] = useState([]);
@@ -36,11 +37,11 @@ function Profile(props) {
   }, [profileRequest]);
 
   return (
-    <>
+    <div className={classes.container}>
       {profile.map((profile) => {
         return <ProfileCard key={profile.id} options={profile} />;
       })}
-    </>
+    </div>
   );
 }
 
