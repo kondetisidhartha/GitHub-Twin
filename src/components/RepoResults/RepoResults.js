@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RepoCard from "../../UI/RepoCard/RepoCard";
 import useHttp from "../hooks/use-http";
 
-function RepoResults() {
+function RepoResults(props) {
   const [repositories, setRepositories] = useState([]);
   const { sendRequest: repoRequest } = useHttp();
 
@@ -28,11 +28,11 @@ function RepoResults() {
   useEffect(() => {
     repoRequest(
       {
-        url: `https://api.github.com/users/Vanguard90/repos`,
+        url: `https://api.github.com/users/${props.userName}/repos`,
       },
       transformRepos.bind(null, setRepositories)
     );
-  }, [repoRequest]);
+  }, [repoRequest, props.userName]);
 
   return (
     <>

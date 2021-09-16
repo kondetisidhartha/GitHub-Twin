@@ -4,7 +4,7 @@ import Input from "../../../UI/Input/Input";
 import ButtonGray from "../../../UI/ButtonGray/ButtonGray";
 import RepoResults from "../../RepoResults/RepoResults";
 
-function RepoLookUp() {
+function RepoLookUp(props) {
   return (
     <>
       <form className={classes["form-container"]}>
@@ -20,7 +20,7 @@ function RepoLookUp() {
         <ButtonGray>Language</ButtonGray>
         <ButtonGray>Sort</ButtonGray>
       </form>
-      <RepoResults />
+      <RepoResults userName={props.userName} />
     </>
   );
 }

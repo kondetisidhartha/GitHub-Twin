@@ -5,16 +5,17 @@ import RepoLookUp from "../ProfileAndRepoLookUp/RepoLookUp/RepoLookUp";
 import classes from "./css/ProfileAndRepoLookUp.module.css";
 import Overview from "../Overview/Overview";
 
-function ProfileAndRepoLookUp() {
+function ProfileAndRepoLookUp(props) {
   return (
     <div className={classes.container}>
+      {console.log(props.userName, "Line 11")}
       <span className={classes.profileContainer}>
-        <Profile />
+        <Profile userName={props.userName} />
       </span>
       <span className={classes.repoLookUpContainer}>
         <Switch>
           <Route path="/" exact={true}>
-            <RepoLookUp />
+            <RepoLookUp userName={props.userName} />
           </Route>
           <Route path="/overview" exact={true}>
             <Overview />

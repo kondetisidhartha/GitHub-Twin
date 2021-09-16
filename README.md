@@ -31,7 +31,15 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
+for more information.
+
+## Instructions to run:
+
+1. Default "github username" is "kondetisidhartha"
+2. Type username in user search input field:
+   > If username exists -> profile and repo changes
+   > If username doesn't exists -> profile and repo doesn't change
 
 ## Future improvements
 

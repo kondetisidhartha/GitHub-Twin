@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header/Header";
@@ -7,12 +7,18 @@ import StickyHeader from "./components/StickyHeader/StickyHeader";
 import ProfileAndRepoLookUp from "./components/ProfileAndRepoLookUp/ProfileAndRepoLookUp";
 
 function App() {
+  const [searchUserName, setSearchUserName] = useState("kondetisidhartha");
+
+  const onChangeHandler = (name) => {
+    setSearchUserName(name);
+  };
+
   return (
     <>
       <BrowserRouter forceRefresh>
-        <Header />
+        <Header onChange={(name) => onChangeHandler(name)} />
         <StickyHeader />
-        <ProfileAndRepoLookUp />
+        <ProfileAndRepoLookUp userName={searchUserName} />
         <Footer />
       </BrowserRouter>
     </>

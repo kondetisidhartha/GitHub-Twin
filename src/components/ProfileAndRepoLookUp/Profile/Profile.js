@@ -30,11 +30,11 @@ function Profile(props) {
   useEffect(() => {
     profileRequest(
       {
-        url: `https://api.github.com/users/afc163`,
+        url: `https://api.github.com/users/${props.userName}`,
       },
       transformProfile.bind(null, setProfile)
     );
-  }, [profileRequest]);
+  }, [profileRequest, props.userName]);
 
   return (
     <div className={classes.container}>
