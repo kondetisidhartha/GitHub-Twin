@@ -22,11 +22,16 @@
 .repoColumn a {
   text-decoration: none;
   color: #000;
-  margin: 0.6rem 2rem;
+  padding: 0.6rem 2rem;
   text-align: center;
   display: flex;
 }
 
 .repoColumn a svg {
   margin-right: 0.5rem;
+}
+
+.activeTab {
+  border-bottom: 2px solid rgb(253, 140, 115);
+  font-weight: 600;
 }

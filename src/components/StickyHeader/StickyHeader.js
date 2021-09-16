@@ -9,18 +9,18 @@ function StickyHeader() {
     <div className={classes.container}>
       <div className={classes.profileColumn}></div>
       <div className={classes.repoColumn}>
-        <NavLink to="./" activeStyle={{ color: "red" }}>
+        <NavLink to="/overview" activeClassName={classes.activeTab}>
           <BiBookOpen /> Overview
         </NavLink>
-        <NavLink to="./" activeStyle={{ color: "red" }}>
+        <NavLink to="/" activeClassName={classes.activeTab} exact={true}>
           <BiBookBookmark />
           Repositories
         </NavLink>
-        <NavLink to="./" activeStyle={{ color: "red" }}>
+        <NavLink to="./projects" activeClassName={classes.activeTab}>
           <AiOutlineProject />
           Projects
         </NavLink>
-        <NavLink to="./" activeStyle={{ color: "red" }}>
+        <NavLink to="/packages" activeClassName={classes.activeTab}>
           <BiPackage />
           Packages
         </NavLink>

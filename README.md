@@ -35,4 +35,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Future improvements
 
+1. Responsive design format
+2. Caching API calls response, incase of network failure and minimising API calls
+
 ## Feedback about exercise

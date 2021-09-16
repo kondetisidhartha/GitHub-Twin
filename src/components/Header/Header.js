@@ -5,6 +5,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { headerItems } from "./HeaderItems";
 import Button from "../../UI/Button/Button";
 import { BiChevronDown } from "react-icons/bi";
+import Input from "../../UI/Input/Input";
 
 // Simple header component
 
@@ -15,6 +16,7 @@ function Header() {
         <Link to="/" className={classes.logo}>
           <AiOutlineGithub />
         </Link>
+        <Input />
         <ul className={classes.items}>
           {headerItems.map((item) => {
             return (
