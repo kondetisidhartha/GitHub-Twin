@@ -8,7 +8,6 @@ import Overview from "../Overview/Overview";
 function ProfileAndRepoLookUp(props) {
   return (
     <div className={classes.container}>
-      {console.log(props.userName, "Line 11")}
       <span className={classes.profileContainer}>
         <Profile userName={props.userName} />
       </span>

@@ -9,11 +9,11 @@
 }
 
 .profile-img {
-  width: 20rem;
-  height: 20rem;
+  width: 16rem;
+  height: 16rem;
   border-radius: 50%;
   position: absolute;
-  top: -5rem;
+  top: -4rem;
   left: 1rem;
   border: 1px solid #ddd;
   background: #fff;
@@ -23,8 +23,8 @@
   width: 20rem;
   padding: 5rem 1rem;
   position: absolute;
-  top: 12rem;
-  left: 1rem;
+  top: 8rem;
+  left: -1rem;
 }
 
 .content .sub-content {
@@ -90,4 +90,9 @@
   cursor: pointer;
   border-radius: 10px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.follow {
+  text-decoration: none;
+  color: #fff;
 }

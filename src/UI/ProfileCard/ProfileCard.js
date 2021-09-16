@@ -51,7 +51,10 @@ function ProfileCard(props) {
                 </p>
               </div>
             </div>
-            <div className={classes.btn}>Follow</div>
+
+            <a className={classes.follow} href="https://github.com/login">
+              <div className={classes.btn}>Follow</div>
+            </a>
           </div>
         </div>
       </div>

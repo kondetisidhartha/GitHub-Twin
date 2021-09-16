@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./css/StickyHeader.module.css";
 import { BiBookOpen, BiBookBookmark, BiPackage } from "react-icons/bi";
 import { AiOutlineProject } from "react-icons/ai";
 
-function StickyHeader() {
+function StickyHeader(props) {
+  const [totalRepos, setTotalRepos] = useState(0);
+
+  // Total number of repositories using default fetch api
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${props.userName}/repos`)
+      .then((response) => response.json())
+      .then((data) => updateTotalRepos(data.length));
+  }, [props.userName]);
+
+  const updateTotalRepos = (length) => {
+    setTotalRepos(length);
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.profileColumn}></div>
@@ -14,9 +27,10 @@ function StickyHeader() {
         </NavLink>
         <NavLink to="/" activeClassName={classes.activeTab} exact={true}>
           <BiBookBookmark />
-          Repositories <span className={classes["repo-count"]}>10</span>
+          Repositories{" "}
+          <span className={classes["repo-count"]}>{totalRepos}</span>
         </NavLink>
-        <NavLink to="./projects" activeClassName={classes.activeTab}>
+        <NavLink to="/projects" activeClassName={classes.activeTab}>
           <AiOutlineProject />
           Projects
         </NavLink>

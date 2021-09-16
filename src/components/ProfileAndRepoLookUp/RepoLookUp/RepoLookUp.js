@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./css/RepoLookUp.module.css";
 import Input from "../../../UI/Input/Input";
 import ButtonGray from "../../../UI/ButtonGray/ButtonGray";
 import RepoResults from "../../RepoResults/RepoResults";
 
 function RepoLookUp(props) {
+  const [searchRepo, setSearchRepo] = useState("");
+
+  const onInputChangeHandler = (event) => {
+    setSearchRepo(event.target.value);
+  };
+
   return (
     <>
       <form className={classes["form-container"]}>
@@ -12,15 +18,15 @@ function RepoLookUp(props) {
           id="repoInput"
           label="Search"
           type="text"
-          value=""
+          value={searchRepo}
           placeholder="Find a repository..."
-          onChangeHandler={() => console.log("Change")}
+          onInputChangeHandler={onInputChangeHandler}
         />
         <ButtonGray>Type</ButtonGray>
         <ButtonGray>Language</ButtonGray>
         <ButtonGray>Sort</ButtonGray>
       </form>
-      <RepoResults userName={props.userName} />
+      <RepoResults userName={props.userName} searchRepo={searchRepo} />
     </>
   );
 }

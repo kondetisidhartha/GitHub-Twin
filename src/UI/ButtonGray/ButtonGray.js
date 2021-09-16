@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ButtonGray(props) {
   return (
-    <Link to="signup">
+    <Link to="/">
       <button className={classes.btn}>{props.children}</button>
     </Link>
   );

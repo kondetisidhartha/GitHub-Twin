@@ -17,7 +17,7 @@ function App() {
     <>
       <BrowserRouter forceRefresh>
         <Header onChange={(name) => onChangeHandler(name)} />
-        <StickyHeader />
+        <StickyHeader userName={searchUserName} />
         <ProfileAndRepoLookUp userName={searchUserName} />
         <Footer />
       </BrowserRouter>

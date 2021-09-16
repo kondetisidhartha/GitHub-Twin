@@ -4,6 +4,7 @@ import useHttp from "../hooks/use-http";
 
 function RepoResults(props) {
   const [repositories, setRepositories] = useState([]);
+
   const { sendRequest: repoRequest } = useHttp();
 
   const transformRepos = (setFunction, responseData) => {
@@ -32,15 +33,21 @@ function RepoResults(props) {
       },
       transformRepos.bind(null, setRepositories)
     );
-  }, [repoRequest, props.userName]);
+  }, [repoRequest, props.userName, props.searchRepo]);
 
-  return (
-    <>
-      {repositories.map((repo) => {
+  let repos = repositories.map((repo) => {
+    return <RepoCard key={repo.id} options={repo} />;
+  });
+
+  if (props.searchRepo) {
+    repos = repositories.map((repo) => {
+      if (repo.name.includes(props.searchRepo)) {
         return <RepoCard key={repo.id} options={repo} />;
-      })}
-    </>
-  );
+      }
+    });
+  }
+
+  return <>{repos}</>;
 }
 
 export default RepoResults;
