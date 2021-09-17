@@ -4,7 +4,7 @@ This project is to create a github profile page clone to display the repositorie
 
 > Followed MVC Structure through full project.
 
-> Used CSS Modules, which makes easy to call css classes and ids without any clash of its names across project.
+> Used CSS Modules, which makes easy to call css classes and ids without any clash of css classes and ids across project.
 
 ### Using custom react hooks (usehttp) for API Calls
 
@@ -40,10 +40,16 @@ for more information.
 2. Type username in user search input field:
    > If username exists(eg. vanguard90) -> profile and repo changes
    > If username doesn't exists(eg. gibberi$h) -> profile and repo doesn't change
+3. Clicking on any repo redirects to github repo link
+4. Email/Twitter/Company are empty, because its value is `null` in response API calls
 
 ## Future improvements
 
+I have created a basic layout and functionality. Project can be expanded to include:
+
 1. Responsive design format
-2. Caching API calls response, incase of network failure and minimising API calls
+2. Caching API calls response, incase of network failure and minimising more API calls
 
 ## Feedback about exercise
+
+I feel this challenge is very good for Intern/ Working Student position. It has all necessary challenges like API calls, react hooks, passing props, custom hooks, reading json data.
