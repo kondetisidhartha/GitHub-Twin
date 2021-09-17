@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./css/RepoLookUp.module.css";
 import Input from "../../../UI/Input/Input";
-import ButtonDropDown from "../../../UI/ButtonDropDown/ButtonDropDown";
+import DropDown from "../../../UI/DropDown/DropDown";
 import RepoResults from "../../RepoResults/RepoResults";
 
 // Component to filter retrived repos
@@ -29,9 +29,9 @@ function RepoLookUp(props) {
           placeholder="Find a repository..."
           onInputChangeHandler={onInputChangeHandler}
         />
-        <ButtonDropDown options={typeRepos}>Type</ButtonDropDown>
-        <ButtonDropDown options={languagesRepos}>Language</ButtonDropDown>
-        <ButtonDropDown options={updateRepos}>Sort</ButtonDropDown>
+        <DropDown options={typeRepos}>Type</DropDown>
+        <DropDown options={languagesRepos}>Language</DropDown>
+        <DropDown options={updateRepos}>Sort</DropDown>
       </form>
       <RepoResults userName={props.userName} searchRepo={searchRepo} />
     </>

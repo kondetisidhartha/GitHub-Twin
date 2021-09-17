@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./css/ButtonDropDown.module.css";
+import classes from "./css/DropDown.module.css";
 import { FaAngleDown } from "react-icons/fa";
 
 // Button used next to repo filter search input, (type, sort etc..)
-function ButtonDropDown(props) {
+function DropDown(props) {
   return (
     <div className={classes.container}>
       <div className={classes.tutorial}>
@@ -27,4 +27,4 @@ function ButtonDropDown(props) {
   );
 }
 
-export default ButtonDropDown;
+export default DropDown;
