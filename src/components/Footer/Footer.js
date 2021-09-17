@@ -1,7 +1,6 @@
 import React from "react";
 import { footerItemsLeft, footerItemsRight } from "./FooterItems";
 import classes from "./css/Footer.module.css";
-import { Link } from "react-router-dom";
 import { AiOutlineGithub } from "react-icons/ai";
 
 // Default basic footer for all components
@@ -18,7 +17,7 @@ function Footer() {
           {footerItemsLeft.map((item) => {
             return (
               <li key={item.id} className={classes.item}>
-                <a href={item.path} target="_blank">
+                <a href={item.path} target="_blank" rel="noreferrer">
                   {item.title}
                 </a>
               </li>
@@ -27,7 +26,7 @@ function Footer() {
         </ul>
         {/* GitHub Logo */}
         <span className={classes.logo}>
-          <a href="https://github.com/" target="_blank">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">
             <AiOutlineGithub />
           </a>
         </span>
@@ -36,7 +35,7 @@ function Footer() {
           {footerItemsRight.map((item) => {
             return (
               <li key={item.id} className={classes.item}>
-                <a href={item.path} target="_blank">
+                <a href={item.path} target="_blank" rel="noreferrer">
                   {item.title}
                 </a>
               </li>
