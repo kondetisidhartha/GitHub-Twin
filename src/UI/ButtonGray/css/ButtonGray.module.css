@@ -9,8 +9,66 @@
   cursor: pointer;
   transition: 0.3s all ease-out;
   margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover {
   color: #aaa;
+}
+
+.tutorial {
+  width: 80%;
+  max-width: 800px;
+}
+
+.tutorial ul {
+  font-size: 0;
+  list-style-type: none;
+}
+
+.tutorial ul li {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  display: inline-block;
+  position: relative;
+}
+
+.tutorial ul li ul {
+  display: none;
+}
+
+.tutorial ul li:hover {
+  cursor: pointer;
+  position: relative;
+}
+
+.tutorial ul li:hover ul {
+  display: block;
+  margin-top: 2px;
+  width: 13rem;
+  position: absolute;
+  right: 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  z-index: 100;
+  background-color: #fff;
+  transition: 1s ease-in all;
+}
+
+.tutorial ul li:hover ul li {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.7rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.tutorial ul li:hover ul li:last-child {
+  border-bottom: 0;
+}
+
+.tutorial ul li:hover ul li:hover {
+  background-color: #eee;
 }

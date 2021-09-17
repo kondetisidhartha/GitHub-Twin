@@ -38,8 +38,8 @@ for more information.
 
 1. Default "github username" is "kondetisidhartha"
 2. Type username in user search input field:
-   > If username exists -> profile and repo changes
-   > If username doesn't exists -> profile and repo doesn't change
+   > If username exists(eg. vanguard90) -> profile and repo changes
+   > If username doesn't exists(eg. gibberi$h) -> profile and repo doesn't change
 
 ## Future improvements
 

@@ -11,6 +11,10 @@ function RepoLookUp(props) {
     setSearchRepo(event.target.value);
   };
 
+  const typeRepos = ["All", "Sources", "Forks", "Archived", "Mirrors"];
+  const languagesRepos = ["All", "JavaScript", "HTML", "Python", "C++"];
+  const updateRepos = ["Last updated", "Name", "Stars"];
+
   return (
     <>
       <form className={classes["form-container"]}>
@@ -22,9 +26,9 @@ function RepoLookUp(props) {
           placeholder="Find a repository..."
           onInputChangeHandler={onInputChangeHandler}
         />
-        <ButtonGray>Type</ButtonGray>
-        <ButtonGray>Language</ButtonGray>
-        <ButtonGray>Sort</ButtonGray>
+        <ButtonGray options={typeRepos}>Type</ButtonGray>
+        <ButtonGray options={languagesRepos}>Language</ButtonGray>
+        <ButtonGray options={updateRepos}>Sort</ButtonGray>
       </form>
       <RepoResults userName={props.userName} searchRepo={searchRepo} />
     </>
