@@ -4,6 +4,8 @@ import Profile from "../ProfileAndRepoLookUp/Profile/Profile";
 import RepoLookUp from "../ProfileAndRepoLookUp/RepoLookUp/RepoLookUp";
 import classes from "./css/ProfileAndRepoLookUp.module.css";
 import Overview from "../Overview/Overview";
+import Packages from "../Packages/Packages";
+import Projects from "../Projects/Projects";
 
 function ProfileAndRepoLookUp(props) {
   return (
@@ -18,6 +20,12 @@ function ProfileAndRepoLookUp(props) {
           </Route>
           <Route path="/overview" exact={true}>
             <Overview />
+          </Route>
+          <Route path="/projects" exact={true}>
+            <Projects />
+          </Route>
+          <Route path="/packages" exact={true}>
+            <Packages />
           </Route>
         </Switch>
       </span>
