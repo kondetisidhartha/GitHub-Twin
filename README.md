@@ -6,7 +6,7 @@ This project is to create a github profile page clone to display the repositorie
 
 > Used CSS Modules, which makes easy to call css classes and ids without any clash of css classes and ids across project.
 
-### Using custom react hooks (usehttp) for API Calls
+> Using custom react hooks (usehttp) for API Calls
 
 ## Getting Started with Create React App
 
@@ -42,6 +42,12 @@ for more information.
    > If username doesn't exists(eg. gibberi$h) -> profile and repo doesn't change
 3. Clicking on any repo redirects to github repo link
 4. Email/Twitter/Company are empty, because its value is `null` in response API calls
+
+## Deployment
+
+1. Used `npm run build` to build optimized output
+2. Used **Netlify** for deployment
+3. Open [https://github-twin.netlify.app](https://github-twin.netlify.app) to view demo
 
 ## Future improvements
 
