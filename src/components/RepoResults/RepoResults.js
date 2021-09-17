@@ -46,7 +46,7 @@ function RepoResults(props) {
   });
 
   if (props.searchRepo) {
-    repos = repositories.map((repo) => {
+    repos = repositories.forEach((repo) => {
       if (repo.name.includes(props.searchRepo)) {
         return <RepoCard key={repo.id} options={repo} />;
       }
