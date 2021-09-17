@@ -1,8 +1,9 @@
 import React from "react";
-import classes from "./css/ButtonGray.module.css";
+import classes from "./css/ButtonDropDown.module.css";
 import { FaAngleDown } from "react-icons/fa";
 
-function ButtonGray(props) {
+// Button used next to repo filter search input, (type, sort etc..)
+function ButtonDropDown(props) {
   return (
     <div className={classes.container}>
       <div className={classes.tutorial}>
@@ -15,7 +16,7 @@ function ButtonGray(props) {
             <ul>
               {props.options
                 ? props.options.map((option) => {
-                    return <li>{option}</li>;
+                    return <li key={Math.random()}>{option}</li>;
                   })
                 : ""}
             </ul>
@@ -26,4 +27,4 @@ function ButtonGray(props) {
   );
 }
 
-export default ButtonGray;
+export default ButtonDropDown;

@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import RepoCard from "../../UI/RepoCard/RepoCard";
 import useHttp from "../hooks/use-http";
 
+// Component where API is called to retrieve repos for given username(passed on from <App/>)
 function RepoResults(props) {
   const [repositories, setRepositories] = useState([]);
 
+  // Using custom hook useHttp() to call API; Used to make clean code and
+  // used at different components as well
   const { sendRequest: repoRequest } = useHttp();
 
+  // useHttp() takes this function to return only required information array
   const transformRepos = (setFunction, responseData) => {
     const loadedRepos = [];
 
@@ -26,6 +30,8 @@ function RepoResults(props) {
     setFunction(loadedRepos);
   };
 
+  // Used in useEffect(), to call only once when component gets loaded and if there is change
+  // username or filter repos
   useEffect(() => {
     repoRequest(
       {

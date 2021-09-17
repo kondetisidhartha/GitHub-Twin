@@ -4,6 +4,7 @@ import classes from "./css/Footer.module.css";
 import { Link } from "react-router-dom";
 import { AiOutlineGithub } from "react-icons/ai";
 
+// Default basic footer for all components
 function Footer() {
   return (
     <>

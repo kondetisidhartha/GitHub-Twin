@@ -6,12 +6,13 @@ import { BiGitRepoForked } from "react-icons/bi";
 import { MdUpdate } from "react-icons/md";
 
 function RepoCard(props) {
-  // Retireving color from saved json file
+  // Retireving color from saved json file (in UI folder) for each language
   let langColor = "";
   if (languageColor.hasOwnProperty(props.options.language)) {
     langColor = languageColor[props.options.language];
   }
 
+  // License
   let license = "";
   if (props.options.repoLicense) {
     const licenseInfo = props.options.repoLicense["name"];
@@ -23,7 +24,7 @@ function RepoCard(props) {
     );
   }
 
-  // Date formatter
+  // Converting String date to required date/month/year
   function get_time_diff(datetime) {
     let oldDate = new Date(datetime);
     let year = oldDate.getFullYear();

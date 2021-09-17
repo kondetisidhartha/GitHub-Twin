@@ -7,6 +7,10 @@ import Overview from "../Overview/Overview";
 import Packages from "../Packages/Packages";
 import Projects from "../Projects/Projects";
 
+// Central component to render profile and repos
+// Routing done here using <Switch> and <Route>
+
+// props contain username(if user given, else default)
 function ProfileAndRepoLookUp(props) {
   return (
     <div className={classes.container}>

@@ -5,9 +5,10 @@ import { BiBookOpen, BiBookBookmark, BiPackage } from "react-icons/bi";
 import { AiOutlineProject } from "react-icons/ai";
 
 function StickyHeader(props) {
+  // username prop is passed from parent <App/>
   const [totalRepos, setTotalRepos] = useState(0);
 
-  // Total number of repositories using default fetch api
+  // Total number of repositories using default fetch api only once when component called
   useEffect(() => {
     fetch(`https://api.github.com/users/${props.userName}/repos`)
       .then((response) => response.json())
@@ -18,6 +19,7 @@ function StickyHeader(props) {
     setTotalRepos(length);
   };
 
+  // Using NavLink to style active tab than <a> and <Link>
   return (
     <div className={classes.container}>
       <div className={classes.profileColumn}></div>

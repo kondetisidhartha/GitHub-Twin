@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../../UI/Card/Card";
 import classes from "./css/Packages.module.css";
 
+// Simple Overview page using <Card/>
 function Packages() {
   return (
     <div className={classes.container}>

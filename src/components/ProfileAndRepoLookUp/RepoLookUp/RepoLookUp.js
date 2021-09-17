@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import classes from "./css/RepoLookUp.module.css";
 import Input from "../../../UI/Input/Input";
-import ButtonGray from "../../../UI/ButtonGray/ButtonGray";
+import ButtonDropDown from "../../../UI/ButtonDropDown/ButtonDropDown";
 import RepoResults from "../../RepoResults/RepoResults";
 
+// Component to filter retrived repos
 function RepoLookUp(props) {
   const [searchRepo, setSearchRepo] = useState("");
 
+  // captures the required repo filter name and updates state
   const onInputChangeHandler = (event) => {
     setSearchRepo(event.target.value);
   };
 
+  // Passed as props to button dropdown for additional filters
   const typeRepos = ["All", "Sources", "Forks", "Archived", "Mirrors"];
   const languagesRepos = ["All", "JavaScript", "HTML", "Python", "C++"];
   const updateRepos = ["Last updated", "Name", "Stars"];
@@ -26,9 +29,9 @@ function RepoLookUp(props) {
           placeholder="Find a repository..."
           onInputChangeHandler={onInputChangeHandler}
         />
-        <ButtonGray options={typeRepos}>Type</ButtonGray>
-        <ButtonGray options={languagesRepos}>Language</ButtonGray>
-        <ButtonGray options={updateRepos}>Sort</ButtonGray>
+        <ButtonDropDown options={typeRepos}>Type</ButtonDropDown>
+        <ButtonDropDown options={languagesRepos}>Language</ButtonDropDown>
+        <ButtonDropDown options={updateRepos}>Sort</ButtonDropDown>
       </form>
       <RepoResults userName={props.userName} searchRepo={searchRepo} />
     </>

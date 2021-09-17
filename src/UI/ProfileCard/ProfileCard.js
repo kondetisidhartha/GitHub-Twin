@@ -5,7 +5,9 @@ import { RiUserFollowFill, RiTwitterFill } from "react-icons/ri";
 import { MdEmail, MdDateRange } from "react-icons/md";
 import { ImOffice } from "react-icons/im";
 
+// UI card to showcase user profile with avatar
 function ProfileCard(props) {
+  // Converting String timeformat to get Year for "since" tag in profile
   let fullYear = new Date(props.options.user_since).getFullYear();
   return (
     <div>

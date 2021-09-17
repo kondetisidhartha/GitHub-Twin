@@ -3,10 +3,14 @@ import ProfileCard from "../../../UI/ProfileCard/ProfileCard";
 import useHttp from "../../hooks/use-http";
 import classes from "./css/Profile.module.css";
 
+// Central component to call API for user profile
 function Profile(props) {
   const [profile, setProfile] = useState([]);
+
+  // Similar to repo API call, using useHttp() custom hook to call for profile
   const { sendRequest: profileRequest } = useHttp();
 
+  // response data is converted to array with required information in this functiono
   const transformProfile = (setFunction, responseData) => {
     const loadedProfile = [];
 

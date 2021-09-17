@@ -6,9 +6,10 @@ import { headerItems } from "./HeaderItems";
 import Button from "../../UI/Button/Button";
 import { BiChevronDown } from "react-icons/bi";
 
-// Simple header component
+// Top header component with black background
 
 function Header(props) {
+  // Storing user typed username and passing it to its parent component(App.js)
   const [searchUser, setSearchUser] = useState("");
 
   // Update user search to input
@@ -16,7 +17,8 @@ function Header(props) {
     setSearchUser(event.target.value);
   };
 
-  // If user press Enter key, search for user repos
+  // If user press Enter key, pass entered username to parent <App /> from where it gets passed to
+  // <RepoProfile/> for API calls
   const searchUserKeyDownHandler = (event) => {
     if (event.key === "Enter") {
       props.onChange(event.target.value);
