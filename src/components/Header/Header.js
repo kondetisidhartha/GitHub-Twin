@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import classes from "./css/Header.module.css";
 import { AiOutlineGithub } from "react-icons/ai";
 import { headerItems } from "./HeaderItems";
-import Button from "../../UI/Button/Button";
+import ButtonTransparent from "../../UI/ButtonTransparent/ButtonTransparent";
 import { BiChevronDown } from "react-icons/bi";
 
 // Top header component with black background
@@ -59,7 +59,9 @@ function Header(props) {
             />
           </div>
           <a href="https://github.com/login">Sign in</a>
-          <Button href="https://github.com/signup">Sign up</Button>
+          <ButtonTransparent href="https://github.com/signup">
+            Sign up
+          </ButtonTransparent>
         </div>
       </nav>
     </>

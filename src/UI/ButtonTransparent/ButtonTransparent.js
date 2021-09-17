@@ -1,8 +1,8 @@
 import React from "react";
-import classes from "./css/Button.module.css";
+import classes from "./css/ButtonTransparent.module.css";
 
 // Simple button used in Sign up on Header
-function Button(props) {
+function ButtonTransparent(props) {
   return (
     <a href={props.href}>
       <button className={classes.btn}>{props.children}</button>
@@ -10,4 +10,4 @@ function Button(props) {
   );
 }
 
-export default Button;
+export default ButtonTransparent;
