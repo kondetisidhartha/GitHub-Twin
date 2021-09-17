@@ -18,23 +18,27 @@ function Footer() {
           {footerItemsLeft.map((item) => {
             return (
               <li key={item.id} className={classes.item}>
-                <Link to={item.path}>{item.title}</Link>
+                <a href={item.path} target="_blank">
+                  {item.title}
+                </a>
               </li>
             );
           })}
         </ul>
         {/* GitHub Logo */}
         <span className={classes.logo}>
-          <Link to="./">
+          <a href="https://github.com/" target="_blank">
             <AiOutlineGithub />
-          </Link>
+          </a>
         </span>
         {/* Right of logo items */}
         <ul className={classes.items}>
           {footerItemsRight.map((item) => {
             return (
               <li key={item.id} className={classes.item}>
-                <Link to={item.path}>{item.title}</Link>
+                <a href={item.path} target="_blank">
+                  {item.title}
+                </a>
               </li>
             );
           })}

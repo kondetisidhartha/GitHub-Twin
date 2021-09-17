@@ -2,27 +2,27 @@ export const footerItemsLeft = [
   {
     id: 1,
     title: "Terms",
-    path: "./",
+    path: "https://docs.github.com/en/github/site-policy/github-terms-of-service",
   },
   {
     id: 2,
     title: "Privacy",
-    path: "./",
+    path: "https://docs.github.com/en/github/site-policy/github-privacy-statement",
   },
   {
     id: 3,
     title: "Security",
-    path: "./",
+    path: "https://github.com/security",
   },
   {
     id: 4,
     title: "Status",
-    path: "./",
+    path: "https://www.githubstatus.com/",
   },
   {
     id: 5,
     title: "Docs",
-    path: "./",
+    path: "https://docs.github.com/en",
   },
 ];
 
@@ -30,31 +30,31 @@ export const footerItemsRight = [
   {
     id: 1,
     title: "Contact GitHub",
-    path: "./",
+    path: "https://support.github.com/?tags=dotcom-footer",
   },
   {
     id: 2,
     title: "Pricing",
-    path: "./",
+    path: "https://github.com/pricing",
   },
   {
     id: 3,
     title: "API",
-    path: "./",
+    path: "https://docs.github.com/en",
   },
   {
     id: 4,
     title: "Training",
-    path: "./",
+    path: "https://services.github.com/",
   },
   {
     id: 5,
     title: "Blog",
-    path: "./",
+    path: "https://github.blog/",
   },
   {
     id: 6,
     title: "About",
-    path: "./",
+    path: "https://github.com/about",
   },
 ];
