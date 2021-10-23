@@ -24,7 +24,7 @@ function StickyHeader(props) {
     <div className={classes.container}>
       <div className={classes.profileColumn}></div>
       <div className={classes.repoColumn}>
-        <NavLink to="/overview" activeClassName={classes.activeTab}>
+        <NavLink to="#">
           <BiBookOpen /> Overview
         </NavLink>
         <NavLink to="/" activeClassName={classes.activeTab} exact={true}>
@@ -32,11 +32,11 @@ function StickyHeader(props) {
           Repositories{" "}
           <span className={classes["repo-count"]}>{totalRepos}</span>
         </NavLink>
-        <NavLink to="/projects" activeClassName={classes.activeTab}>
+        <NavLink to="#">
           <AiOutlineProject />
           Projects
         </NavLink>
-        <NavLink to="/packages" activeClassName={classes.activeTab}>
+        <NavLink to="#">
           <BiPackage />
           Packages
         </NavLink>
