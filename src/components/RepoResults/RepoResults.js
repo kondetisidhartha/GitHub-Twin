@@ -45,12 +45,15 @@ function RepoResults(props) {
     return <RepoCard key={repo.id} options={repo} />;
   });
 
+  // Since map() returns an array, forEach() doesn't return anything
   if (props.searchRepo) {
-    repos = repositories.forEach((repo) => {
-      if (repo.name.includes(props.searchRepo)) {
-        return <RepoCard key={repo.id} options={repo} />;
-      }
-    });
+    repos = repositories.map((repo) =>
+      repo.name.includes(props.searchRepo) ? (
+        <RepoCard key={repo.id} options={repo} />
+      ) : (
+        ""
+      )
+    );
   }
 
   return <>{repos}</>;
