@@ -19,18 +19,12 @@ function ProfileAndRepoLookUp(props) {
       </span>
       <span className={classes.repoLookUpContainer}>
         <Switch>
-          <Route path="/" exact={true}>
+          <Route path="/">
             <RepoLookUp userName={props.userName} />
           </Route>
-          <Route path="/overview" exact={true}>
-            {/* <Overview /> */}
-          </Route>
-          <Route path="/projects" exact={true}>
-            {/* <Projects /> */}
-          </Route>
-          <Route path="/packages" exact={true}>
-            {/* <Packages /> */}
-          </Route>
+          <Route path="/overview">{/* <Overview /> */}</Route>
+          <Route path="/projects">{/* <Projects /> */}</Route>
+          <Route path="/packages">{/* <Packages /> */}</Route>
         </Switch>
       </span>
     </div>
